@@ -24,7 +24,7 @@ export default function Home() {
 
     try {
       const res = await fetch(
-        "https://hook.eu1.make.com/z7g6m5que6y5x1du4f7sn7hjtinggo1f",
+        "https://hook.eu1.make.com/mqxno6qddmz5ai9rnf65nkmhel23bbor",
         {
           method: "POST",
           headers: {
