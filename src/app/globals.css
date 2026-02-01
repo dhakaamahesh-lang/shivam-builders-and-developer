@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #141414;
+  --foreground: #171717;
+  --white: #ffffff;
+  --white-80: #ffffffcc;
+  --white-70: #ffffffb3;
+  --white-50: #ffffff80;
+  --white-20: #ffffff33;
+  --white-10: #ffffff1a;
+  --white-5: #ffffff0d;
+  --black-main: #141414;
+  --black-2: #1f1f1f;
+  --black-40: #14141466;
+  --black-80: #141414cc;
+
+  /* HEADINGS - Mobile */
+  --h-1: 40px;
+  --leading-h1: 1.2;
+  --h-2: 32px;
+  --leading-h2: 1.2;
+  --h-3: 26px;
+  --leading-h3: 1.3;
+  --h-4: 24px;
+  --leading-h4: 1.3;
+  --h-5: 20px;
+  --leading-h5: 1.4;
+  --h-6: 18px;
+  --leading-h6: 1.4;
+
+  /* PARAGRAPH - Mobile */
+  --p-20: 18px;
+  --leading-p-20: 1.6;
+  --p-18: 16px;
+  --leading-p-18: 1.6;
+  --p-17: 16px;
+  --leading-p-17: 1.5;
+  --p-16: 14px;
+  --leading-p-16: 1.5;
+
+  /* NEW: Text colors that adapt to theme */
+  --text-primary: var(--black-main);
+  --text-secondary: var(--black-80);
+  --text-muted: var(--black-40);
+  --surface: var(--white);
+  --surface-elevated: var(--white);
+  --border-color: var(--black-40);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  :root {
+    --h-1: 52px;
+    --h-2: 40px;
+    --h-3: 32px;
+    --h-4: 28px;
+    --h-5: 24px;
+    --h-6: 20px;
+
+    --p-20: 19px;
+    --p-18: 17px;
+    --p-17: 17px;
+    --p-16: 16px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1200px) {
+  :root {
+    --h-1: 68px;
+    --leading-h1: 1.2;
+    --h-2: 52px;
+    --leading-h2: 1.1;
+    --h-3: 40px;
+    --leading-h3: 1.2;
+    --h-4: 32px;
+    --leading-h4: 1.2;
+    --h-5: 26px;
+    --leading-h5: 1.4;
+    --h-6: 24px;
+    --leading-h6: 1.4;
+
+    --p-20: 20px;
+    --leading-p-20: 1.6;
+    --p-18: 18px;
+    --leading-p-18: 1.6;
+    --p-17: 17px;
+    --leading-p-17: 1.5;
+    --p-16: 16px;
+    --leading-p-16: 1.5;
+  }
+}
+
+@theme inline {
+  /* COLORS */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-white: var(--white);
+  --color-white-80: var(--white-80);
+  --color-white-70: var(--white-70);
+  --color-white-50: var(--white-50);
+  --color-white-20: var(--white-20);
+  --color-white-10: var(--white-10);
+  --color-white-5: var(--white-5);
+  --color-black-main: var(--black-main);
+  --color-black-2: var(--black-2);
+  --color-black-40: var(--black-40);
+  --color-black-80: var(--black-80);
+
+  /* NEW: Adaptive theme colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border-color);
+
+  /* FONTS */
+  --font-manrope: var(--font-manrope);
+  --text-h-1: var(--h-1);
+  --text-h-2: var(--h-2);
+  --text-h-3: var(--h-3);
+  --text-h-4: var(--h-4);
+  --text-h-5: var(--h-5);
+  --text-h-6: var(--h-6);
+  --text-p-20: var(--p-20);
+  --text-p-18: var(--p-18);
+  --text-p-17: var(--p-17);
+  --text-p-16: var(--p-16);
+
+  --leading-h1: var(--leading-h1);
+  --leading-h2: var(--leading-h2);
+  --leading-h3: var(--leading-h3);
+  --leading-h4: var(--leading-h4);
+  --leading-h5: var(--leading-h5);
+  --leading-h6: var(--leading-h6);
+  --leading-p-20: var(--leading-p-20);
+  --leading-p-18: var(--leading-p-18);
+  --leading-p-17: var(--leading-p-17);
+  --leading-p-16: var(--leading-p-16);
+}
+
+@media (prefers-color-scheme) {
+  :root {
+    --background: #141414;
+    --foreground: #ededed;
+    --text-primary: var(--white);
+    --text-secondary: var(--white-80);
+    --text-muted: var(--white-50);
+    --surface: var(--black-main);
+    --surface-elevated: var(--black-2);
+    --border-color: var(--white-20);
+  }
+}
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.rfm-initial-child-container,
+.rfm-marquee {
+  @apply !items-end
+}
+
+/* Typography Classes */
+.typography-h1 {
+  font-size: var(--h-1);
+  line-height: var(--leading-h1);
+  font-weight: 500;
+}
+
+.typography-h2 {
+  font-size: var(--h-2);
+  line-height: var(--leading-h2);
+  font-weight: 600;
+}
+
+.typography-h3 {
+  font-size: var(--h-3);
+  line-height: var(--leading-h3);
+  font-weight: 500;
+}
+
+.typography-h4 {
+  font-size: var(--h-4);
+  line-height: var(--leading-h4);
+  font-weight: 500;
+}
+
+.typography-h5 {
+  font-size: var(--h-5);
+  line-height: var(--leading-h5);
+  font-weight: 600;
+}
+
+.typography-h6 {
+  font-size: var(--h-6);
+  line-height: var(--leading-h6);
+  font-weight: 400;
+}
+
+.typography-p20 {
+  font-size: var(--p-20);
+  line-height: var(--leading-p-20);
+  font-weight: 400;
+}
+
+.typography-p20m {
+  font-size: var(--p-20);
+  line-height: var(--leading-p-20);
+  font-weight: 500;
+}
+
+.typography-p18 {
+  font-size: var(--p-18);
+  line-height: var(--leading-p-18);
+  font-weight: 400;
+}
+
+.typography-p18m {
+  font-size: var(--p-18);
+  line-height: var(--leading-p-18);
+  font-weight: 500;
+}
+
+.typography-p17 {
+  font-size: var(--p-17);
+  line-height: var(--leading-p-17);
+  font-weight: 500;
+}
+
+.typography-p16 {
+  font-size: var(--p-16);
+  line-height: var(--leading-p-16);
+  font-weight: 400;
+}
+
+.typography-p16m {
+  font-size: var(--p-16);
+  line-height: var(--leading-p-16);
+  font-weight: 500;
+}
+
+.container {
+  @apply px-6 lg:px-16 max-w-7xl
+}
+
+button {
+  @apply cursor-pointer
+}
